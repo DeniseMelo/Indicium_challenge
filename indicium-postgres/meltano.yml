@@ -1,0 +1,34 @@
+version: 1
+default_environment: dev
+project_id: 3b0d5f82-18c5-49c8-b91d-4c4fd7fec76a
+environments:
+- name: dev
+- name: staging
+- name: prod
+
+plugins:
+  extractors:
+    - name: tap-postgres
+      variant: meltanolabs
+      pip_url: git+https://github.com/MeltanoLabs/tap-postgres.git
+      config:
+        host: localhost
+        port: 5432
+        user: northwind_user
+        password: thewindisblowing
+        database: northwind
+        filter_schemas:
+          - public
+        select:
+          - public.*
+
+  loaders:
+    - name: target-csv
+      variant: meltanolabs
+      pip_url: git+https://github.com/MeltanoLabs/target-csv.git
+      config:
+        destination_path: "/home/denise/code-challenge/files-github-indicium/data/postgres/${MELTANO_RUN_DATE}/"
+        file_naming_scheme: "{stream_name}.csv"
+        delimiter: ","
+        quotechar: '"'
+

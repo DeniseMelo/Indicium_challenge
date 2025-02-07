@@ -1,0 +1,26 @@
+# Ignorar diretórios e arquivos desnecessários
+
+# Diretórios do Meltano
+.meltano/
+
+# Saídas geradas
+output/
+
+# Jupyter notebooks
+notebook/
+
+# Python bytecode
+*.pyc
+*.pyo
+
+# Arquivos de log
+*.log
+
+# Arquivos temporários
+*.csv
+
+# Outros arquivos temporários
+*.tmp
+
+# Ignorar README.md dos projetos Meltano
+*/README.md

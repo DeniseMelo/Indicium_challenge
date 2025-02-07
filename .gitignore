@@ -1,0 +1,34 @@
+# Ignorar arquivos de configuração do Meltano
+*.lock
+*.yml
+
+# Ignorar arquivos de logs
+*.log
+
+# Ignorar arquivos de banco de dados e dados temporários
+dbdata/
+dbdata_final/
+dbdata_final_db/
+
+# Ignorar arquivos de configuração específicos do ambiente (por exemplo, arquivos do Docker)
+docker-compose.yml
+
+# Ignorar arquivos de desenvolvimento locais (ex: notebooks, arquivos temporários)
+*.ipynb
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# Ignorar diretórios e arquivos de plugins e transforms
+plugins/
+transform/
+
+# Ignorar arquivos de inicialização
+data/raw/
+data/postgres/
+data/csv/
+
+# Ignorar arquivos desnecessários como README.md em subprojetos
+README.md
+

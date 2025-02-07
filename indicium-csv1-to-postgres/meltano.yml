@@ -1,0 +1,34 @@
+default_environment: dev
+environments:
+- name: dev
+- name: staging
+- name: prod
+plugins:
+  extractors:
+  - config:
+      files:
+      - delimiter: ','
+        entity: order_details
+        keys:
+        - order_id
+        path: /home/denise/code-challenge/files-github-indicium/data/csv/2025-02-07/order_details.csv
+        quotechar: '"'
+    name: tap-csv
+    pip_url: git+https://github.com/MeltanoLabs/tap-csv.git
+    variant: meltanolabs
+  loaders:
+  - config:
+      database: final_db
+      default_target_schema: public
+      hard_delete: true
+      host: localhost
+      password: oventocontinuasoprando
+      port: 5433
+      schema: public
+      table_name: order_details
+      user: denise_user
+    name: target-postgres
+    pip_url: meltanolabs-target-postgres
+    variant: meltanolabs
+project_id: ee8490db-7a7b-4d44-80f4-d5c48227eda3
+version: 1
