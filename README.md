@@ -78,8 +78,8 @@ docker-compose up -d
  ### Desafios!
  1. Instalaçao do Meltano e a sua limitação na filepath
 ### Melhorias no Projeto
-1. **Meu próximo desafio é usar parquet, ppois ao fianl do projeto quando já estava enviando dados para o postgres, ocorreu um erro com o tap-parquet**
+1. **Meu próximo desafio é voltar a usar parquet, pois ao fianl do projeto quando já estava enviando dados para o postgres, ocorreu um erro com o tap-parquet**
    ![](https://github.com/DeniseMelo/Indicium_challenge/blob/main/images/Screenshot%20from%202025-02-05%2010-05-57.png)
    ***
-2. **O erro , aparentemente uma incompatibilidade de versão com o Numpy !**
+2. **O erro ,aparentemente, uma incompatibilidade de versão com o Numpy. Uma nova versão foi reinstalada para que fosse compatível, mesmo assim o erro persistia!**
    ![](https://github.com/DeniseMelo/Indicium_challenge/blob/main/images/Screenshot%20from%202025-02-05%2010-05-17.png)
